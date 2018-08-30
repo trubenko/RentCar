@@ -1,11 +1,14 @@
 ul
 	each car in cars
 		li.collection-item.avatar
-			img.circle(src='./images/tipo.png', alt='' width='300')
-			span.title Title
-			p
-				| First Line
-				br
-				|          Second Line
-			a.secondary-content(href='#!')
-				i.material-icons grade
+			.row
+				.col.s4
+					img.circle(src='./images/tipo.png', alt='' width='200')
+				.col.s8
+					span.title Title
+						p
+							| First Line
+							br
+							| Second Line
+						a.secondary-content(href='#!')
+							i.material-icons grade

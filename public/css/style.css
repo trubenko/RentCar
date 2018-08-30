@@ -12,3 +12,17 @@
 .icon-block .material-icons {
 	font-size: inherit;
 }
+
+.card-panel,
+.avatar {
+    border: 1px solid;
+}
+
+.similar {
+    color: darkgrey;
+    margin-top: -10px;
+}
+
+.car_name {
+    font-size: large;
+}
