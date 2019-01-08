@@ -3,35 +3,51 @@ var express = require('express');
 var path = require('path');
 var cookieParser = require('cookie-parser');
 var logger = require('morgan');
-
-var indexRouter = require('./routes/index');
-var usersRouter = require('./routes/users');
-var booking = require('./routes/booking');
-var prices = require('./routes/prices');
-var promos = require('./routes/promos');
-var conditions = require('./routes/conditions');
-var park = require('./routes/autopark');
-
+var i18n = require('i18n');
+var language = 'en';
 var app = express();
+require('./routes/routersHandler')(app);
+// minimal config
+
+
+i18n.configure({
+    cookie: 'rentcar',
+    locales: ['en', 'de', 'ru'],
+    directory: __dirname + '/locales',
+    defaultLocale: 'en'
+});
+
+app.use(function (req, res, next) {
+    // express helper for natively supported engines
+    res.locals.__ = res.__ = function () {
+        return i18n.__.apply(req, arguments);
+    };
+
+    next();
+});
+
+app.use(cookieParser());
+app.use(i18n.init);
+
+
 
 // view engine setup
 app.set('views', path.join(__dirname, 'views'));
 app.set('view engine', 'pug');
 
+// app.use();
 app.use(logger('dev'));
 app.use(express.json());
 app.use(express.urlencoded({ extended: false }));
-app.use(cookieParser());
+
 app.use(express.static(path.join(__dirname, 'public')));
 
+app.get('/lang/:lang', function(req, res){
+    var language = req.params.lang;
+    i18n.setLocale(req, language);
 
-app.use('/', indexRouter);
-app.use('/users', usersRouter);
-app.use('/booking', booking);
-app.use('/conditions', conditions);
-app.use('/prices', prices);
-app.use('/promos', promos);
-app.use('/autopark', park);
+    res.send({ data: req.params.lang})
+});
 
 // catch 404 and forward to error handler
 app.use(function(req, res, next) {

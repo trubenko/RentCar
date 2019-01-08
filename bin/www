@@ -7,12 +7,21 @@
 var app = require('../app');
 var debug = require('debug')('rentcar:server');
 var http = require('http');
+var cookieSession = require('cookie-session');
+var cookieParser = require('cookie-parser');
+
+app.use(cookieSession({
+    name: 'session',
+    keys: ['igorek'],
+    // Cookie Options
+    maxAge: 24 * 60 * 60 * 1000 // 24 hours
+}));
 
 /**
  * Get port from environment and store in Express.
  */
 
-var port = normalizePort(process.env.PORT || '3000');
+var port = normalizePort(process.env.PORT || '3001');
 app.set('port', port);
 
 /**
