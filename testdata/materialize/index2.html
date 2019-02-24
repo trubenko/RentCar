@@ -130,24 +130,24 @@
             </ul>
 
             <ul class="collection prices">
-                <li class="collection-item">
+                <li class="collection-item" data-price="20">
                     <div class="day">за 1 сутки</div>
                     <div class="price">20 $</div>
                     <div class="desc">30 и более суток:</div>
                 </li>
-                <li class="collection-item">
+                <li class="collection-item" data-price="23">
                     <div class="day">за 1 сутки</div>
                     <div class="price">23 $</div>
                     <div class="desc">от 10 до 29 суток:</div>
                 </li>
-                <li class="collection-item">
+                <li class="collection-item" data-price="25">
                     <div class="day">за 1 сутки</div>
-                    <div class="price">20 $</div>
+                    <div class="price">25 $</div>
                     <div class="desc">от 4 до 9 суток:</div>
                 </li>
-                <li class="collection-item">
+                <li class="collection-item" data-price="33">
                     <div class="day">за 1 сутки</div>
-                    <div class="price">18 $</div>
+                    <div class="price">33 $</div>
                     <div class="desc">от 2 до 3 суток:</div>
                 </li>
             </ul>
@@ -188,16 +188,15 @@
                         <ul>
                             <li>Когда забираете?</li>
                             <li>
-                                <input type="text" class="datepicker" id="dateFrom">
-
+                                <input type="text" class="datepicker datefrom" id="dateFrom">
                             </li>
                             <li>Где забираете?</li>
                             <li>
-                                <select>
+                                <select class="takeFrom">
                                     <option value="" disabled selected>Выбирете место</option>
-                                    <option value="1">Офис</option>
-                                    <option value="2">Аэропорт Борисполь</option>
-                                    <option value="3">Аэропорт Жуляны</option>
+                                    <option value="0">Офис - бесплатно</option>
+                                    <option value="30">Аэропорт Борисполь - 30$</option>
+                                    <option value="30">Аэропорт Жуляны - 30$</option>
                                 </select>
                                 <label>Выбирете место</label>
 
@@ -208,75 +207,79 @@
                         <ul>
                             <li>Когда отдаете?</li>
                             <li>
-                                <input type="text" class="datepicker" id="dateTo">
+                                <input type="text" class="datepicker dateto" id="dateTo">
                             </li>
                             <li>Где отдаете?</li>
                             <li>
-                                <select>
+                                <select class="takeTo">
                                     <option value="" disabled selected>Выбирете место</option>
-                                    <option value="1">Офис</option>
-                                    <option value="2">Аэропорт Борисполь</option>
-                                    <option value="3">Аэропорт Жуляны</option>
+                                    <option value="0">Офис</option>
+                                    <option value="50">Аэропорт Борисполь - 50$</option>
+                                    <option value="50">Аэропорт Жуляны - 50$</option>
                                 </select>
                             </li>
                         </ul>
                     </td>
                 </tr>
-                <tr>
+                <tr class="additional">
                     <td>3</td>
                     <td>Дополнительные опции</td>
-                    <td>
+                    <td colspan="2">
                         <ul>
-                            <li>
+                            <li class="calc">
                                 <label>
                                     <input type="checkbox"/>
                                     <span>GPS навигатор</span>
+                                    <span class="price right-align">1</span>
                                 </label>
                             </li>
-                            <li>
+                            <li class="calc">
                                 <label>
                                     <input type="checkbox"/>
                                     <span>Безлимитный wi-fi интернет</span>
+                                    <span class="price">2</span>
                                 </label>
                             </li>
-                            <li>
+                            <li class="calc">
                                 <label>
                                     <input type="checkbox"/>
                                     <span>Видеорегистратор</span>
+                                    <span class="price">3</span>
                                 </label>
                             </li>
-                            <li>
+                            <li class="calc">
                                 <label>
                                     <input type="checkbox"/>
                                     <span>Планшет с картами 3G (iPad)</span>
+                                    <span class="price">4</span>
                                 </label>
                             </li>
-                        </ul>
-                    </td>
-                    <td>
-                        <ul>
-                            <li>
+                            <li class="calc">
                                 <label>
                                     <input type="checkbox"/>
                                     <span>Детское автокресло (0+)</span>
+                                    <span class="price">5</span>
                                 </label>
                             </li>
-                            <li>
+                            <li class="calc">
                                 <label>
                                     <input type="checkbox"/>
                                     <span>Второй водитель (БЕСПЛАТНО)</span>
+                                    <span class="price">6</span>
                                 </label>
                             </li>
-                            <li>
+                            <li class="calc">
                                 <label>
                                     <input type="checkbox"/>
                                     <span>Страхование колес и стекол</span>
+                                    <span class="price">7</span>
                                 </label>
                             </li>
-                            <li>
+                            <li class="calc">
                                 <label>
                                     <input type="checkbox"/>
                                     <span>Экшен-камера GoPro</span>
+                                    <span class="price">8</span>
                                 </label>
                             </li>
                         </ul>
@@ -284,9 +287,11 @@
                 </tr>
                 <tr>
                     <td>4</td>
-                    <td>Стоимость за 21 сутки</td>
-                    <td>Предварительная стоимость аренды: 493 $</td>
-                    <td>Залоговая сумма: 300 $</td>
+                    <td>Стоимость за <span class="dateAmount">1</span> сутки</td>
+                    <td>Предварительная стоимость аренды:
+                        <span class="totalAmount">0</span> $
+                    </td>
+                    <td>Залоговая сумма: <span class="rezerv">300</span> $</td>
                 </tr>
                 <tr>
                     <td>5</td>
@@ -372,29 +377,6 @@
 <!--JavaScript at end of body for optimized loading-->
 <script type="text/javascript" src="js/materialize.min.js"></script>
 
-<script>
-
-    $(document).ready(function () {
-        $('.sidenav').sidenav();
-        $(".dropdown-trigger").dropdown();
-
-        $('select').formSelect();
-
-        $('#dateFrom').datepicker({
-            autoClose: true,
-            onClose: function() {
-                var date = this.date;
-                $('#dateTo').datepicker({
-                    minDate: date,
-                    autoClose: true
-                });
-            },
-            minDate: new Date()
-        });
-
-     });
-
-
-</script>
+<script src="js/custom.js"></script>
 </body>
 </html>
