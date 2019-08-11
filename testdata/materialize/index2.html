@@ -11,6 +11,9 @@
             integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8="
             crossorigin="anonymous"></script>
 
+    <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/semantic-ui/2.4.1/semantic.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/semantic-ui/2.4.1/semantic.js"></script>
+
     <!--Let browser know website is optimized for mobile-->
     <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
     <meta content="text/html; charset=UTF-8" http-equiv="Content-Type">
@@ -66,19 +69,65 @@
     </div>
 </header>
 
+
+<div class="ui menu fixed">
+
+    <div class="header item center">
+        Our Company
+    </div>
+    <a class="item">
+        About Us
+    </a>
+    <a class="item">
+        Jobs
+    </a>
+    <a class="item right">
+        Locations
+    </a>
+
+</div>
+
+<div class="ui menu fixed">
+
+    <div class="header item center">
+        Our Company
+    </div>
+    <a class="item">
+        About Us
+    </a>
+    <a class="item">
+        Jobs
+    </a>
+    <a class="item right">
+        Locations
+    </a>
+
+</div>
+
 <div class="container order">
+
     <div class="row"></div>
 
-    <div class="col s12">
-        <ul class="order-steps valign-wrapper">
-            <li class="valign-wrapper"> 1. ВЫБОР АВТО</li>
-            <li class="arrow valign-wrapper"></li>
-            <li class="valign-wrapper"> 2. ВЫБОР ДОПОЛНЕНИЙ И ОПЦИЙ</li>
-            <li class="arrow valign-wrapper"></li>
-            <li class="valign-wrapper">3. ОФОРМЛЕНИЕ ЗАКАЗА</li>
-        </ul>
+    <div class="ui ordered steps container">
+        <div class="completed step">
+            <div class="content">
+                <div class="title">Car</div>
+                <div class="description">Choose your car</div>
+            </div>
+        </div>
+        <div class="active completed step">
+            <div class="content">
+                <div class="title">Options</div>
+                <div class="description">Enter addition information</div>
+            </div>
+        </div>
+        <div class="disabled step">
+            <div class="content">
+                <div class="title">Confirm Booking</div>
+                <div class="description">Verify booking details and confirm</div>
+            </div>
+        </div>
     </div>
-
 
     <div class="row"></div>
 
