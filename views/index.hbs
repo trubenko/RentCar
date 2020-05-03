@@ -1,2 +1,220 @@
-<h1 class="asdasa">{{title}}</h1>
 <p>Welcome to {{title}}</p>
+<div class="container order">
+  <div class="row"></div>
+  <div class="col s12">
+    <ul class="order-steps valign-wrapper">
+      <li class="valign-wrapper"> 1. ВЫБОР АВТО</li>
+      <li class="arrow valign-wrapper"></li>
+      <li class="valign-wrapper"> 2. ВЫБОР ДОПОЛНЕНИЙ И ОПЦИЙ</li>
+      <li class="arrow valign-wrapper"></li>
+      <li class="valign-wrapper">3. ОФОРМЛЕНИЕ ЗАКАЗА</li>
+    </ul>
+  </div>
+  <div class="row"></div>
+</div>
+<div class="container" id="cars-list">
+  <div class="row">
+    <div class="col s12 m6 l6"><img class="circle car-image" src="../images/corolla.jpg" alt=""/></div>
+    <div class="col s12 m6 l6">
+      <div class="title">Volkswagen Polo Sedan</div>
+      <div class="classification">Эконом класс</div>
+      <ul class="car-char">
+        <li><img src="../images/gearshift.png"/><span>Автомат</span></li>
+        <li><img src="../images/sedan.png"/><span>Седан</span></li>
+        <li><img src="../images/engine.png"/><span> 1,4 л (94 л.с.)</span></li>
+        <li><img src="../images/seat.png"/><span>5 мест</span></li>
+      </ul>
+      <ul class="car-char">
+        <li><img src="../images/chassis.png"/><span>Передний</span></li>
+        <li><img src="../images/oil.png"/><span>Бензин/ГАЗ</span></li>
+        <li><img src="../images/conditioner.png"/><span> Кондиционер</span></li>
+        <li><img src="../images/distance.png"/><span>7.3 л/100 км.</span></li>
+      </ul>
+      <ul class="collection prices">
+        <li class="collection-item" data-price="20">
+          <div class="day">за 1 сутки</div>
+          <div class="price">20 $</div>
+          <div class="desc">30 и более суток:</div>
+        </li>
+        <li class="collection-item" data-price="23">
+          <div class="day">за 1 сутки</div>
+          <div class="price">23 $</div>
+          <div class="desc">от 10 до 29 суток:</div>
+        </li>
+        <li class="collection-item" data-price="25">
+          <div class="day">за 1 сутки</div>
+          <div class="price">25 $</div>
+          <div class="desc">от 4 до 9 суток:</div>
+        </li>
+        <li class="collection-item" data-price="33">
+          <div class="day">за 1 сутки</div>
+          <div class="price">33 $</div>
+          <div class="desc">от 2 до 3 суток:</div>
+        </li>
+      </ul>
+      <div class="debt">Цена залога: 300 дол</div>
+      <div class="condition">
+        <p> Условия аренды:</p>
+        <ul>
+          <li>Минимальный срок аренды - 2 суток</li>
+          <li>Минимальный стаж - 2 года</li>
+          <li>Минимальный возраст - 21 год</li>
+        </ul>
+      </div>
+    </div>
+  </div>
+  <div class="row">
+    <p class="center-align"> Online бронирование автомобиля:</p>
+    <form action="">
+      <table>
+        <tbody>
+          <tr>
+            <td>1</td>
+            <td>Тариф включает</td>
+            <td>
+              <div>- Страхование КАСКО;</div>
+              <div>- Страховка гражданской ответственности;</div>
+            </td>
+            <td>
+              <div>- Пробег 350 км/сутки;</div>
+              <div>- Круглосуточная поддержка.</div>
+            </td>
+          </tr>
+          <tr>
+            <td>2</td>
+            <td>Период аренды</td>
+            <td>
+              <ul>
+                <li>Когда забираете?</li>
+                <li>
+                  <input class="datepicker datefrom" id="dateFrom" type="text"/>
+                </li>
+                <li>Где забираете?</li>
+                <li>
+                  <select class="takeFrom">
+                    <option value="" disabled="" selected="">Выбирете место</option>
+                    <option value="0">Офис - бесплатно</option>
+                    <option value="30">Аэропорт Борисполь - 30$</option>
+                    <option value="30">Аэропорт Жуляны - 30$</option>
+                  </select>
+                  <label>Выбирете место</label>
+                </li>
+              </ul>
+            </td>
+            <td>
+              <ul>
+                <li>Когда отдаете?</li>
+                <li>
+                  <input class="datepicker dateto" id="dateTo" type="text"/>
+                </li>
+                <li>Где отдаете?</li>
+                <li>
+                  <select class="takeTo">
+                    <option value="" disabled="" selected="">Выбирете место</option>
+                    <option value="0">Офис</option>
+                    <option value="50">Аэропорт Борисполь - 50$</option>
+                    <option value="50">Аэропорт Жуляны - 50$</option>
+                  </select>
+                </li>
+              </ul>
+            </td>
+          </tr>
+          <tr class="additional">
+            <td>3</td>
+            <td>Дополнительные опции</td>
+            <td colspan="2">
+              <ul>
+                <li class="calc">
+                  <label>
+                    <input type="checkbox"/><span>GPS навигатор</span><span class="price right-align">1</span>
+                  </label>
+                </li>
+                <li class="calc">
+                  <label>
+                    <input type="checkbox"/><span>Безлимитный wi-fi интернет</span><span class="price">2</span>
+                  </label>
+                </li>
+                <li class="calc">
+                  <label>
+                    <input type="checkbox"/><span>Видеорегистратор</span><span class="price">3</span>
+                  </label>
+                </li>
+                <li class="calc">
+                  <label>
+                    <input type="checkbox"/><span>Планшет с картами 3G (iPad)</span><span class="price">4</span>
+                  </label>
+                </li>
+                <li class="calc">
+                  <label>
+                    <input type="checkbox"/><span>Детское автокресло (0+)</span><span class="price">5</span>
+                  </label>
+                </li>
+                <li class="calc">
+                  <label>
+                    <input type="checkbox"/><span>Второй водитель (БЕСПЛАТНО)</span><span class="price">6</span>
+                  </label>
+                </li>
+                <li class="calc">
+                  <label>
+                    <input type="checkbox"/><span>Страхование колес и стекол</span><span class="price">7</span>
+                  </label>
+                </li>
+                <li class="calc">
+                  <label>
+                    <input type="checkbox"/><span>Экшен-камера GoPro</span><span class="price">8</span>
+                  </label>
+                </li>
+              </ul>
+            </td>
+          </tr>
+          <tr>
+            <td>4</td>
+            <td>Стоимость за<span class="dateAmount">1</span> сутки</td>
+            <td>Предварительная стоимость аренды:<span class="totalAmount">0</span> $</td>
+            <td>Залоговая сумма:<span class="rezerv">300</span> $</td>
+          </tr>
+          <tr>
+            <td>5</td>
+            <td>Персональные данные</td>
+            <td colspan="2">
+              <div class="row">
+                <div class="row">
+                  <div class="input-field col s4">
+                    <input class="validate" id="first_name" type="text"/>
+                    <label for="first_name">Имя</label>
+                  </div>
+                  <div class="input-field col s4">
+                    <input class="validate" id="last_name" type="text"/>
+                    <label for="last_name">Фамилия</label>
+                  </div>
+                  <div class="input-field col s4">
+                    <input class="validate" id="phone" type="text" placeholder="+380 ......"/>
+                    <label for="phone">Телефон</label>
+                  </div>
+                </div>
+                <div class="row">
+                  <div class="input-field col s12">
+                    <input class="validate" id="email" type="email"/>
+                    <label for="email">Email</label>
+                  </div>
+                </div>
+                <div class="row">
+                  <div class="row">
+                    <div class="input-field col s12">
+                      <textarea class="materialize-textarea" id="textarea1"></textarea>
+                      <label for="textarea1">Комментарий</label>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="right-align">
+                <button class="confirm" type="button">Забронировать авто</button>
+              </div>
+            </td>
+          </tr>
+        </tbody>
+      </table>
+      <div class="center-align"></div>
+    </form>
+  </div>
+</div>
