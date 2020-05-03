@@ -1,12 +1,10 @@
 var express = require('express');
 var router = express.Router();
 
-/* GET users listing. */
-router.get('/booking', function(req, res, next) {
-  res.render('content/booking', {
+router.get('/', function(req, res) {
+  res.render('content/contacts', {
     title: 'Express'
   });
-  next();
 });
 
 module.exports = router;

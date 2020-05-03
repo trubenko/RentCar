@@ -9,8 +9,11 @@ var sassMiddleware = require('node-sass-middleware');
 var exphbs = require('express-handlebars');
 
 var indexRouter = require('./routes/index');
-var usersRouter = require('./routes/users');
 var conditionsRouter = require('./routes/conditions');
+var carparkRouter = require('./routes/carpark');
+var aboutusRouter = require('./routes/aboutus');
+var contactsRouter = require('./routes/contacts');
+var promotionsRouter = require('./routes/promotions');
 
 var app = express();
 
@@ -35,11 +38,15 @@ app.use(sassMiddleware({
   indentedSyntax: true, // true = .sass and false = .scss
   sourceMap: true
 }));
+
 app.use(express.static(path.join(__dirname, 'public')));
 
 app.use('/', indexRouter);
-app.use('/users', usersRouter);
 app.use('/conditions', conditionsRouter);
+app.use('/carpark', carparkRouter);
+app.use('/contacts', contactsRouter);
+app.use('/aboutus', aboutusRouter);
+app.use('/promotions', promotionsRouter);
 
 // catch 404 and forward to error handler
 app.use(function(req, res, next) {
