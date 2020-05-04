@@ -110,6 +110,10 @@ module.exports = {
             options: { sourceMap: true }
           },
           {
+            loader: 'resolve-url-loader',
+            options: {sourceMap: true}
+          },
+          {
             loader: "postcss-loader",
             options: {
               sourceMap: true,
@@ -122,12 +126,13 @@ module.exports = {
   },
 
   //todo remove
-//  resolve: {
-//    alias: {
-//      "~": PATHS.src,
+  resolve: {
+    alias: {
+      "~": PATHS.src,
+      assets: PATHS.assets
 //      vue$: "vue/dist/vue.js"
-//    }
-//  },
+    }
+  },
 
   plugins: [
     new MiniCssExtractPlugin({

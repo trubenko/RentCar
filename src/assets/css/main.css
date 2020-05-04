@@ -36,10 +36,13 @@ nav {
 
 .brand-logo {
   float: left;
-  /*background: url("../img/new-logo.svg") no-repeat;*/
   height: 64px;
-  width: 250px;
+  width: 270px;
   background-size: cover;
+}
+
+.logo-img {
+max-width: 100%;
 }
 
 .order .order-steps {
@@ -69,7 +72,7 @@ nav {
 
 .order .arrow {
   color: white;
-  /*background: url(../img/right-arrow.png) no-repeat;*/
+  background: url("/assets/img/right-arrow.png") no-repeat;
   background-size: 44px;
   width: 130px;
 }
