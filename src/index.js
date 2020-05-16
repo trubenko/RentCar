@@ -2,10 +2,10 @@
 import './js/'
 
 // SCSS
-//import './assets/scss/main.scss'
+//import './scss/main.scss'
 
 // CSS (example)
- import './assets/css/main.css'
+ import './css/main.css'
 
 // Vue.js
 //window.Vue = require('vue')
