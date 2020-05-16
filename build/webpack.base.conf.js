@@ -2,10 +2,8 @@
    ========================================================================== */
 
 const path = require("path");
-//const fs = require("fs");
 const MiniCssExtractPlugin = require("mini-css-extract-plugin");
 const CopyWebpackPlugin = require("copy-webpack-plugin");
-//const HtmlWebpackPlugin = require("html-webpack-plugin");
 
 // Main const. Feel free to change it
 const PATHS = {
@@ -14,44 +12,21 @@ const PATHS = {
   assets: "assets/"
 };
 
-// Pages const for HtmlWebpackPlugin
-// see more: https://github.com/vedees/webpack-template/blob/master/README.md#html-dir-folder
-
-//todo remove
-//const PAGES_DIR = PATHS.src;
-//const PAGES = fs
-//  .readdirSync(PAGES_DIR)
-//  .filter(fileName => fileName.endsWith(".html"));
-
 module.exports = {
   externals: {
     paths: PATHS
   },
   entry: {
     app: PATHS.src
-    // module: `${PATHS.src}/your-module.js`,
   },
   output: {
-//    filename: `${PATHS.assets}js/[name].[contenthash].js`,
     filename: `${PATHS.assets}js/[name].js`,
     path: PATHS.dist,
     publicPath: "/"
   },
-
-  //todo remove
-//  optimization: {
-//    splitChunks: {
-//      cacheGroups: {
-//        vendor: {
-//          name: "vendors",
-//          test: /node_modules/,
-//          chunks: "all",
-//          enforce: true
-//        }
-//      }
-//    }
-//  },
-
+  optimization: {
+    minimize: false
+  },
   module: {
     rules: [
       {
@@ -130,13 +105,11 @@ module.exports = {
     alias: {
       "~": PATHS.src,
       assets: PATHS.assets
-//      vue$: "vue/dist/vue.js"
     }
   },
 
   plugins: [
     new MiniCssExtractPlugin({
-//      filename: `${PATHS.assets}css/[name].[contenthash].css`,
       filename: `${PATHS.assets}css/[name].css`
     }),
     new CopyWebpackPlugin([
@@ -152,14 +125,5 @@ module.exports = {
       Best way to create pages:
       https://github.com/vedees/webpack-template/blob/master/README.md#third-method-best
     */
-
-    //todo remove
-//    ...PAGES.map(
-//      page =>
-//        new HtmlWebpackPlugin({
-//          template: `${PAGES_DIR}/${page}`,
-//          filename: `./${page}`
-//        })
-//    )
   ]
 };

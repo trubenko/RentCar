@@ -6,7 +6,8 @@ const baseWebpackConfig = require("./webpack.base.conf");
 
 const buildWebpackConfig = merge(baseWebpackConfig, {
   mode: "production",
-  plugins: []
+  plugins: [],
+  watch: true
 });
 
 module.exports = new Promise((resolve, reject) => {

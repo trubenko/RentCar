@@ -8,6 +8,9 @@ var Handlebars = require('handlebars');
 var sassMiddleware = require('node-sass-middleware');
 var exphbs = require('express-handlebars');
 
+const webpack = require('webpack');
+const webpackDevMiddleware = require('webpack-dev-middleware');
+
 var indexRouter = require('./routes/index');
 var conditionsRouter = require('./routes/conditions');
 var carparkRouter = require('./routes/carpark');
@@ -16,6 +19,8 @@ var contactsRouter = require('./routes/contacts');
 var promotionsRouter = require('./routes/promotions');
 
 var app = express();
+const config = require('./webpack.config.js');
+const compiler = webpack(config);
 
 var hbs = exphbs.create({
   defaultLayout: 'layout',
@@ -27,6 +32,10 @@ var hbs = exphbs.create({
 app.engine('hbs', hbs.engine);
 app.set('view engine', 'hbs');
 app.set('views', path.join(__dirname, 'views'));
+
+//app.use(webpackDevMiddleware(compiler, {
+//  publicPath: "/",
+//}));
 
 app.use(logger('dev'));
 app.use(express.json());
