@@ -1,0 +1,206 @@
+main {
+    flex: 1 0 auto;
+}
+
+nav {
+    background-color: #34635e;
+}
+
+.page-footer {
+    background-color: #34635e;
+}
+
+.info-block {
+    height: 64px;
+    background-color: white;
+    overflow: hidden;
+
+}
+
+.info-block .collection {
+    float: right;
+    height: 100%;
+    margin: 0;
+    border: 0;
+
+    /*border-right-color: #b0bec5;*/
+}
+
+.info-block .collection .collection-item {
+    float: right;
+    height: 100%;
+    border-right: 1px solid #b0bec5;
+}
+
+.brand-logo {
+    float: left;
+    background: url("../new-logo.svg") no-repeat;
+    height: 64px;
+    width: 250px;
+    background-size: cover;
+}
+
+.order .order-steps {
+    overflow: hidden;
+
+    margin: 0 auto;
+    position: relative;
+}
+
+.order .order-steps li {
+    float: left;
+    background-color: #5bc15b;
+    height: 43px;
+    padding-left: 5px;
+}
+
+.order .order-steps li:nth-child(odd) {
+    width: 100%;
+}
+
+.order a {
+    color: white;
+    height: 100%;
+    display: block;
+    vertical-align: middle;
+}
+
+.order .arrow {
+    color: white;
+    background: url(../right-arrow.png) no-repeat;
+    background-size: 44px;
+    width: 130px;
+}
+
+.collection .collection-item.avatar {
+    padding-left: 240px;
+}
+
+.collection .collection-item {
+    height: 200px;
+
+}
+
+.collection .collection-item.avatar:not(.circle-clipper) > .circle, .collection .collection-item.avatar :not(.circle-clipper) > .circle {
+    max-width: 200px;
+    width: 100%;
+    height: auto;
+}
+
+#included {
+    background-color: #d7dd1042;
+}
+
+.collection.prices .collection-item {
+    height: 10px;
+}
+
+.classification {
+    margin-top: -10px;
+    display: block;
+    font-size: 10px;
+    color: grey;
+    font-style: italic;
+}
+
+#cars-list .prices li {
+    padding: 0 5px;
+    position: relative;
+    font-size: 12.5px;
+    height: 25px;
+}
+
+#cars-list .prices div {
+    float: right;
+}
+
+#cars-list .prices .desc {
+    float: left;
+}
+
+#cars-list .prices div:first-child {
+    padding-left: 5px;
+}
+
+.car-details {
+    font-size: 12.5px;
+    float: left;
+    width: 50%;
+    margin-top: 40px;
+}
+
+.car-details li {
+    position: relative;
+    margin-bottom: 4px;
+}
+
+.car-details img {
+    padding-right: 5px;
+    float: left;
+    width: 22px;
+}
+
+.car-char {
+    font-size: 16px;
+    float: left;
+    min-width: 125px;
+    box-sizing: border-box;
+    padding: 4px 2px;
+    width: 50%;
+
+}
+
+.car-char li {
+    position: relative;
+    margin-bottom: 4px;
+    width: 130px;
+}
+
+.car-char img {
+    padding-right: 5px;
+    float: left;
+    width: 22px;
+}
+
+.car-image {
+    width: 100%;
+}
+#cars-list {
+    min-width: 600px;
+}
+
+#cars-list .prices div {
+    float: right;
+}
+
+.additional li {
+    position: relative;
+    border-bottom: 1px dotted grey;
+}
+
+.additional .price {
+    position: absolute;
+    top: 10px;
+    right: 0;
+}
+
+.confirm {
+    display: inline-block;
+    font-weight: 400;
+    text-align: center;
+    vertical-align: middle;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+    border: 1px solid transparent;
+    padding: .375rem .75rem;
+    font-size: 1rem;
+    line-height: 1.5;
+    border-radius: .25rem;
+    transition: color .15s ease-in-out,background-color .15s ease-in-out,border-color .15s ease-in-out,box-shadow .15s ease-in-out;
+    color: #fff;
+    background-color: #28a745;
+    border-color: #28a745;
+}
+
