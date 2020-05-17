@@ -1,7 +1,0 @@
-{
-	"Hello World": "Hello World",
-	"Hello": "Hello",
-	"Hello %s": "Hello %s",
-	"Hello {{name}}": "Hello {{name}}",
-	"Condition": "Condition"
-}
