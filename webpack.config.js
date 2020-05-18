@@ -110,14 +110,16 @@ module.exports = {
     },
 
     plugins: [
-        new CleanWebpackPlugin(),
+        new CleanWebpackPlugin({
+            cleanStaleWebpackAssets: false
+        }),
         new MiniCssExtractPlugin({
             filename: `css/[name].css`
         }),
         new CopyWebpackPlugin([
             { from: `${PATHS.src}/img`, to: `img` },
             { from: `${PATHS.src}/fonts`, to: `fonts` },
-            { from: `${PATHS.src}/static`, to: "" }
+//            { from: `${PATHS.src}/static`, to: "" }
         ]),
         new webpack.SourceMapDevToolPlugin({
             filename: "[file].map"

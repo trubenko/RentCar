@@ -3,9 +3,9 @@
   "version": "0.0.0",
   "private": true,
   "scripts": {
-    "dev": "webpack-dev-server --open --config ./build/webpack.dev.conf.js",
-    "build": "webpack --config ./build/webpack.build.conf.js",
-    "start": "nodemon ./bin/www"
+    "start1"        : "npm-run-all --parallel watch:server watch:build",
+    "watch:build"  : "webpack",
+    "watch:server" : "nodemon --watch views --watch src ./bin/www"
   },
   "browserslist": [
     "> 1%",
@@ -20,6 +20,7 @@
     "http-errors": "~1.6.2",
     "http-proxy": "^1.17.0",
     "morgan": "~1.9.0",
+    "npm-run-all": "^4.1.5",
     "path": "^0.12.7",
     "url": "^0.11.0"
   },
