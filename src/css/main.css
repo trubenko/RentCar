@@ -1,6 +1,7 @@
 /*@import "materialize.css";*/
-body {
-  /*background: yellow;*/
+input[type="checkbox"]:checked + span:not(.lever)::before{
+  border-bottom:2px solid #ff9800;
+  border-right:2px solid #ff9800;
 }
 
 main {
